@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DeepTech — Frontend Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">Deep<span>Tech</span></div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <h1>Professional UI — Task 1</h1>
+        <p>Clean, minimal and responsive frontend demo built with HTML, CSS and vanilla JavaScript.</p>
+        <div class="cta">
+          <button id="viewFeatures">Explore Features</button>
+          <button id="openModal" class="primary">Submission Checklist</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section features">
+      <h2>What this implements</h2>
+      <ul class="feature-list">
+        <li>Centered header with simple nav</li>
+        <li>Responsive layout (mobile + desktop)</li>
+        <li>Dynamic skills list populated from a JSON object</li>
+        <li>Accessible modal with checklist</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="section skills">
+      <h2>Skills (loaded from JSON)</h2>
+      <p>Click the button to load sample JSON that populates the skills below:</p>
+      <div class="controls">
+        <button id="loadData">Load Sample JSON</button>
+      </div>
+      <ul id="skillsList" class="skill-list" aria-live="polite"></ul>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact & Submission</h2>
+      <p>Push this project to GitHub, then submit the repository link in the Google Form provided by the company.</p>
+      <p><strong>Submission Form:</strong> <a href="https://forms.gle/GCCjJDtZrnxmakLd6" target="_blank" rel="noopener">https://forms.gle/GCCjJDtZrnxmakLd6</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© DeepTech — Frontend Intern Task 1</small>
+  </footer>
+
+  <!-- Modal (hidden by default) -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" tabindex="-1">
+    <div class="modal-content" role="document">
+      <button id="closeModal" class="modal-close" aria-label="Close">✕</button>
+      <h3 id="modalTitle">Submission Checklist</h3>
+      <ul>
+        <li>Files in repository root: <code>index.html</code>, <code>style.css</code>, <code>script.js</code></li>
+        <li>Responsive layout (mobile + desktop)</li>
+        <li>Dynamic JSON loading implemented</li>
+        <li>Repository link submitted in Google Form</li>
+      </ul>
+      <p class="muted">Good luck — this is ready for upload.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
